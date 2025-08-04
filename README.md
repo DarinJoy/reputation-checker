@@ -89,14 +89,4 @@ MIT License
 
 ---
 
-> Developed with 💻 and ☕ by \[Your Name]
-
-```
-
----
-
-### ✅ Tip:
-Once you’ve added the actual Matrix video and tested everything, take a screenshot or record a GIF and place it in the repo. Then link it under `## 📸 Preview Screenshot`.
-
-Want me to generate the full folder as a ZIP for upload or initialize your GitHub repo README?
-```
+> Developed with 💻 and ☕ by Darin Joy
