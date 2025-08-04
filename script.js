@@ -1,4 +1,4 @@
-const apiKey = "AIzaSyDU3aarxQesMgP-_hskKhWB_S7LRpTAT0A"; // Replace with your actual key
+const apiKey = "Your_Api_KEY"; // Replace with your actual key
 
 function sanitizeURL(url) {
   try {
