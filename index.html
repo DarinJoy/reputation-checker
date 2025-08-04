@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Reputation Checker</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
+      rel="stylesheet" />
+    <style>
+      /* Minimal inlined fallback styles for testing */
+      body {
+        margin: 0;
+        font-family: "Share Tech Mono", monospace;
+        background-color: #000;
+        color: #00ff00;
+        overflow: hidden;
+      }
+
+      .container {
+        text-align: center;
+        padding: 40px;
+        width: 90%;
+        max-width: 600px;
+        background: rgba(0, 255, 0, 0.05);
+        border: 1px solid #0f0;
+        backdrop-filter: blur(5px);
+        border-radius: 12px;
+        box-shadow: 0 0 20px #00ff00aa;
+        z-index: 1;
+        position: relative;
+        left: 300px;
+        top: 200px;
+        animation: fadeInUp 1s ease;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      input {
+        width: 85%;
+        padding: 12px;
+        margin-top: 25px;
+        font-size: 1.1rem;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #0f0;
+        border: 1px solid #00ff00;
+        outline: none;
+        caret-color: #00ff00;
+        border-radius: 6px;
+        box-shadow: 0 0 10px #00ff0077;
+      }
+
+      input:focus {
+        box-shadow: 0 0 20px #00ff00;
+      }
+
+      button {
+        margin-top: 20px;
+        padding: 12px 30px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #0f0;
+        border: 1px solid #00ff00;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 10px #00ff00aa;
+      }
+
+      button:hover {
+        background-color: #00ff00;
+        color: #000;
+        box-shadow: 0 0 25px #00ff00;
+      }
+
+      #resultBox {
+        margin-top: 30px;
+        padding: 20px;
+        border: 2px solid;
+        border-radius: 10px;
+        font-size: 1.2rem;
+        transition: 0.3s ease;
+        backdrop-filter: blur(3px);
+      }
+
+      .safe {
+        color: #00ff00;
+        border-color: #00ff00;
+        box-shadow: 0 0 15px #00ff00aa;
+      }
+
+      .suspicious {
+        color: #ffff00;
+        border-color: #ffff00;
+        box-shadow: 0 0 15px #ffff00aa;
+      }
+
+      .dangerous {
+        color: #ff0000;
+        border-color: #ff0000;
+        box-shadow: 0 0 15px #ff0000aa;
+      }
+
+      .neutral {
+        color: #888;
+        border-color: #444;
+        box-shadow: 0 0 10px #444;
+      }
+
+      #bgVideo {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100vw;
+        min-height: 100vh;
+        z-index: -1;
+        object-fit: cover;
+        opacity: 0.2;
+        filter: brightness(50%) contrast(130%) grayscale(20%);
+      }
+    </style>
+  </head>
+  <body>
+    <video autoplay muted loop id="bgVideo">
+      <source src="BG.mp4" type="video/mp4" />
+    </video>
+    <div class="container">
+      <h1>🕵️ Website Reputation Checker</h1>
+      <input type="text" id="urlInput" placeholder="Enter website URL..." />
+      <button onclick="checkReputation()">Check</button>
+      <div id="resultBox" class="neutral">
+        <p id="resultText">Reputation will appear here.</p>
+      </div>
+    </div>
+
+    <!-- ✅ Important: script.js loaded at the end -->
+    <script src="script.js"></script>
+  </body>
+</html>
